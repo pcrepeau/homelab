@@ -14,7 +14,7 @@ spec:
             - name: renovate
               image: renovate/renovate:latest
               args:
-                - pcrepeau/pi-cluster
+                - pcrepeau/homelab
 
               envFrom:
                 - secretRef:
