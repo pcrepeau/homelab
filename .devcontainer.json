@@ -1,0 +1,25 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+ // "forwardPorts": [3000, 8080],
+  "features": {
+    "ghcr.io/stu-bell/devcontainer-features/homebrew:latest": {},
+  },
+  "runArgs": [
+    "--userns=keep-id", "--security-opt", "label=disable",
+  ],
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
+  "onCreateCommand": "sudo chsh -s /usr/bin/zsh $USER",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+          "path": "/usr/bin/zsh"
+          }
+        }
+      }
+    }
+  }
+}
