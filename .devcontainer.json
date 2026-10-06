@@ -4,10 +4,10 @@
   "features": {
     "ghcr.io/stu-bell/devcontainer-features/homebrew:latest": {},
   },
-  //"runArgs": [
-  //  "--userns=keep-id", "--security-opt", "label=disable",
-  //],
-  //2026-10-06"remoteUser": "vscode",
+  "runArgs": [
+    "--userns=keep-id", "--security-opt", "label=disable",
+  ],
+  "remoteUser": "vscode",
   "containerUser": "vscode",
   "onCreateCommand": "sudo chsh -s /usr/bin/zsh $USER",
   "customizations": {
