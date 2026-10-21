@@ -6,10 +6,12 @@
 //  "runArgs": [
 //    "--userns=keep-id", "--security-opt", "label=disable",
 //  ],
-  "remoteUser": "vscode",
+  //"remoteUser": "vscode",
   //"containerUser": "pcrepeau",
   "postCreateCommand": "scripts/setup",
   "forwardPorts": [
-    3008
-  ]
+    3008, 
+  ],
+  "postAttachCommand": "echo 'eval \"$(direnv hook zsh)\"' >> ~/.zshrc"
+
 }
