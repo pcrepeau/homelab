@@ -1,0 +1,10 @@
+#!/bin/bash
+
+/usr/local/bin/mise trust /workspaces/$DEVPOD_WORKSPACE_ID/mise.toml && /usr/local/bin/mise install
+
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+curl -sSfL \
+  https://github.com/cloudnative-pg/cloudnative-pg/raw/main/hack/install-cnpg-plugin.sh |
+  sudo sh -s -- -b /usr/local/bin
