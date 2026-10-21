@@ -1,0 +1,15 @@
+{
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+//  "runArgs": [
+//    "--userns=keep-id", "--security-opt", "label=disable",
+//  ],
+  "remoteUser": "vscode",
+  //"containerUser": "pcrepeau",
+  "postCreateCommand": "scripts/setup",
+  "forwardPorts": [
+    3008
+  ]
+}
